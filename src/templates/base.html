@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <title>{% block title %} {{ title }} {% endblock %}</title>
+  </head>
+
+  <body>
+    <section>
+      <nav class="navbar is-info">
+        <div class="container">
+          <div class="navbar-brand">
+            <a class="navbar-item" href="../">
+              <div> Lisp web hot reload </div>
+            </a>
+            <span class="navbar-burger burger" data-target="navbarMenu">
+              <span></span>
+              <span></span>
+              <span></span>
+            </span>
+          </div>
+          <div id="navbarMenu" class="navbar-menu">
+            <div class="navbar-end">
+              <span class="navbar-item">
+                <a class="button is-white is-outlined" href="#">
+                  <span class="icon">
+                    <i class="fa fa-github"></i>
+                  </span>
+                  <span>Github</span>
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </section>
+
+    <div class="container">
+      <div class="columns">
+        <div class="column is-8 is-offset-2">
+
+          {% for elt in config %}
+          <div  class="box content">
+	    <article class="post">
+	      <div class="media">
+	        <div class="media-content">
+	          <div class="content">
+                    <div> {{ elt.key }} </div>
+                    <div> {{ elt.val }} </div>
+	          </div>
+	        </div>
+	      </div>
+	    </article>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+
+</html>
