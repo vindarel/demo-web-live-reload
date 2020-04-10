@@ -4,7 +4,7 @@
 
 (in-package :web-live-reload)
 
-(setf *config*
+(defparameter *config*
   '((:key "foo"
      :val "is foo")
     (:key "best language?"
@@ -14,6 +14,9 @@
   "See also (start :port xxxx)")
 
 (defparameter *server* nil)
+
+(defun fn ()
+  (format nil "Hello from a function"))
 
 ;; Register the templates directory.
 (djula:add-template-directory
@@ -26,6 +29,7 @@
 (easy-routes:defroute root ("/" :method :get) ()
   (djula:render-template* +base.html+ nil
                           :title "Lisp web live reload example"
+                          :fn (fn)
                           :config *config*))
 
 (export 'start)

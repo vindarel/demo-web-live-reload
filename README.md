@@ -34,7 +34,7 @@ You'll get this:
 
 ![](start.png)
 
-You can change the `*config*` variable:
+The template prints the `*config*` variable, which you can change in the REPL:
 
 ~~~lisp
 * (in-package :web-live-reload)
@@ -49,9 +49,15 @@ You can change the `*config*` variable:
 
 refresh, and voilà, your new config is live.
 
+For functions, it is just the same (redefine the function `fn` that
+returns a string, if you want to try).
+
+If a file changes (for example after a git pull), compile it with a
+usual `load`: `(load "src/web.lisp")`.
+
 I was looking for a way to reload a user's config and personal data
 from a running website, and I think this will be the solution. No
 downtime. I'll be more careful on using this to recompile the whole
-app, but we know it's possible.
+app, even though for small-ish changes it seems perfectly appropriate.
 
 That's all, but that made my day.
