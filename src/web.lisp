@@ -4,7 +4,7 @@
 
 (in-package :web-live-reload)
 
-(defparameter *config*
+(defvar *config*
   '((:key "foo"
      :val "is foo")
     (:key "best language?"
@@ -13,7 +13,7 @@
 (defparameter *port* 7890
   "See also (start :port xxxx)")
 
-(defparameter *server* nil)
+(defvar *server* nil)
 
 (defun fn ()
   (format nil "Hello from a function"))

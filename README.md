@@ -61,3 +61,17 @@ downtime. I'll be more careful on using this to recompile the whole
 app, even though for small-ish changes it seems perfectly appropriate.
 
 That's all, but that made my day.
+
+---
+
+Bonus points:
+
+- after a git pull, the (Djula) templates are automatically updated. No operation is needed to see them live.
+- you'll understand and appreciate the difference between
+  `defparameter` and `defvar`. Imagine you declare a variable with
+  `(defparameter *data* nil)` and you populate it with some heavy
+  computation at the application startup. Now if you `load` the file
+  this declaration is in, you'll set the data back to `nil`. If you
+  declare it with `defvar`, you can live-re`load` your app and the
+  data doesn't go away. You can try both cases with the `*config*`
+  variable.
