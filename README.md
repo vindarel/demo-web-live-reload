@@ -66,7 +66,9 @@ That's all, but that made my day.
 
 Bonus points:
 
-- after a git pull, the (Djula) templates are automatically updated. No operation is needed to see them live.
+- after a git pull, the (Djula) templates are automatically
+  updated. No operation is needed to see them live. (you can disable
+  this by pushing `:djula-prod` into the features set)
 - you'll understand and appreciate the difference between
   `defparameter` and `defvar`. Imagine you declare a variable with
   `(defparameter *data* nil)` and you populate it with some heavy
