@@ -9,7 +9,7 @@ binary of the web app and simply run it, but one thing I had not
 realized, despite being the basics, is that by starting the web app
 with `sbcl --load app.lisp`, we are dropped into the regular Lisp
 REPL, with the web server running in its own thread (as in development
-mode), and that we can consequently interact with the running app.
+mode, but unlike with the binary), and that we can consequently interact with the running app.
 
 As a demonstration, you can clone this repository and run the example like this:
 
@@ -55,10 +55,16 @@ returns a string, if you want to try).
 If a file changes (for example after a git pull), compile it with a
 usual `load`: `(load "src/web.lisp")`.
 
+You can also reload all the app with `(ql:quickload :myproject)`,
+which will install the dependencies, without needing to restart the
+running image.
+
 I was looking for a way to reload a user's config and personal data
-from a running website, and I think this will be the solution. No
-downtime. I'll be more careful on using this to recompile the whole
-app, even though for small-ish changes it seems perfectly appropriate.
+from a running website, and this has proved very practical. I have no
+downtime, it is pure Lisp, it is the workflow I am used to. I am more
+cautious on using this to recompile the whole app, even though I did
+it without glitches so far. The thing to *not* do is to change the
+global state manually, aka to develop in production!
 
 That's all, but that made my day.
 
@@ -77,3 +83,4 @@ Bonus points:
   declare it with `defvar`, you can live-re`load` your app and the
   data doesn't go away. You can try both cases with the `*config*`
   variable.
+- this app

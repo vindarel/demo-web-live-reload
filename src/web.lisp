@@ -40,4 +40,9 @@
                                 :port (or port *port*)))
   (hunchentoot:start *server*)
   (format t "~&Ready. You can access the application!~&")
-  (force-output))
+  (force-output)
+
+  (uiop:format! t "~&In addition, starting a Swank server on port 4006.~&")
+  (bt:make-thread (lambda ()
+                    (swank:create-server :port 4006))
+                  :name "swank"))
