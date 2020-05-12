@@ -83,4 +83,4 @@ Bonus points:
   declare it with `defvar`, you can live-re`load` your app and the
   data doesn't go away. You can try both cases with the `*config*`
   variable.
-- this app
+- the app started a Swank server on port 4006, if you want to try on your VPS.
