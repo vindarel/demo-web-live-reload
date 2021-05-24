@@ -84,3 +84,9 @@ Bonus points:
   data doesn't go away. You can try both cases with the `*config*`
   variable.
 - the app started a Swank server on port 4006, if you want to try on your VPS.
+
+---
+
+Other demos:
+
+- dynamic changes with ISSR and without JavaScript: https://github.com/vindarel/ISSR-productlist/
