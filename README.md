@@ -90,3 +90,7 @@ Bonus points:
 Other demos:
 
 - dynamic changes with ISSR and without JavaScript: https://github.com/vindarel/ISSR-productlist/
+
+Project skeleton:
+
+- [cl-cookieweb](https://github.com/vindarel/cl-cookieweb) - Hunchentoot, easy-routes, Djula integration, Bulma CSS, dummy DB model, migrations (built-in Mito feature), load static assets, test suite, run from sources or build a binary, parse CLI args.
