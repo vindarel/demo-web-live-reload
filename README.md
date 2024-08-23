@@ -1,4 +1,6 @@
 
+# Stating the obvious: using the REPL to live-reload a running website
+
 Well all know that we can start a web server in the REPL and develop a
 web app as interactively as any other app, we know how to [connect to
 a remote Lisp
@@ -87,10 +89,29 @@ Bonus points:
 
 ---
 
-Other demos:
+# How to live-reload your Common Lisp web app: after deployment, the app running on your VPS
+
+We connect to a Swank server (or keep a tmux session alive, or use signals).
+
+More: [How to deploy a web application so that I can modify its code, while it is running?](https://stackoverflow.com/a/78898447)
+
+
+## More Links
+
+Other demos
 
 - dynamic changes with ISSR and without JavaScript: https://github.com/vindarel/ISSR-productlist/
 
 Project skeleton:
 
 - [cl-cookieweb](https://github.com/vindarel/cl-cookieweb) - Hunchentoot, easy-routes, Djula integration, Bulma CSS, dummy DB model, migrations (built-in Mito feature), load static assets, test suite, run from sources or build a binary, parse CLI args.
+
+## Lisp?!
+
+Hell, yes, Common Lisp.
+
+- https://lispcookbook.github.io/cl-cookbook/
+- https://github.com/CodyReichert/awesome-cl
+- https://github.com/azzamsa/awesome-lisp-companies/
+- 7h+ of my course in videos: https://www.udemy.com/course/common-lisp-programming/?referralCode=2F3D698BBC4326F94358
+  - we see the basics, error handling, CLOS, macros… subscribe now and get updates ;)
